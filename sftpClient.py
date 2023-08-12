@@ -1,6 +1,12 @@
 '''
 Use sftpserver/main.py from https://github.com/rspivak/sftpserver to run the server to test this client
 
+How to create keys:
+openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout test_rsa.key
+openssl genrsa -out keypair_new.pem 2048
+openssl genrsa -aes256 -out key_with_pass.key 2048
+ssh-keygen -f /home/cho-uc/ecdsa_key.pem -t ecdsa -b 521
+
 '''
 
 import paramiko
